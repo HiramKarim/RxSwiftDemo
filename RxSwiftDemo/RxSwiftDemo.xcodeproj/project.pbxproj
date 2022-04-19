@@ -17,6 +17,8 @@
 		1F8CD386277032C90007B60F /* RxSwiftDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8CD385277032C90007B60F /* RxSwiftDemoTests.swift */; };
 		1F8CD390277032C90007B60F /* RxSwiftDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8CD38F277032C90007B60F /* RxSwiftDemoUITests.swift */; };
 		1F8CD392277032C90007B60F /* RxSwiftDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8CD391277032C90007B60F /* RxSwiftDemoUITestsLaunchTests.swift */; };
+		1FC1038B280A07D000C1389C /* PhotosCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC1038A280A07D000C1389C /* PhotosCollectionVC.swift */; };
+		1FCFB1B7280B9B2100335E51 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCFB1B6280B9B2100335E51 /* PhotoCell.swift */; };
 		5D400257DB8C9F62CFF9840A /* Pods_RxSwiftDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BB32BC02399CAD64E2FA0FC /* Pods_RxSwiftDemoTests.framework */; };
 		D0CF6BD8C954764125F1601D /* Pods_RxSwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F42DC3BE2C288C04C4A298A /* Pods_RxSwiftDemo.framework */; };
 /* End PBXBuildFile section */
@@ -54,6 +56,8 @@
 		1F8CD38F277032C90007B60F /* RxSwiftDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftDemoUITests.swift; sourceTree = "<group>"; };
 		1F8CD391277032C90007B60F /* RxSwiftDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1F8CD39E27703B0F0007B60F /* RxSwiftPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RxSwiftPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		1FC1038A280A07D000C1389C /* PhotosCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionVC.swift; sourceTree = "<group>"; };
+		1FCFB1B6280B9B2100335E51 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		6466BAF24BE4A65C8C964B4E /* Pods-RxSwiftDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-RxSwiftDemoTests/Pods-RxSwiftDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6FEFE14BF4A5F6BFE88D8971 /* Pods-RxSwiftDemo-RxSwiftDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftDemo-RxSwiftDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-RxSwiftDemo-RxSwiftDemoUITests/Pods-RxSwiftDemo-RxSwiftDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		83B23FD5CB33453152B1B65E /* Pods-RxSwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftDemo.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftDemo/Pods-RxSwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,10 +125,12 @@
 				1F8CD36E277032C80007B60F /* AppDelegate.swift */,
 				1F8CD370277032C80007B60F /* SceneDelegate.swift */,
 				1F8CD372277032C80007B60F /* ViewController.swift */,
+				1FC1038A280A07D000C1389C /* PhotosCollectionVC.swift */,
 				1F8CD374277032C80007B60F /* Main.storyboard */,
 				1F8CD377277032C90007B60F /* Assets.xcassets */,
 				1F8CD379277032C90007B60F /* LaunchScreen.storyboard */,
 				1F8CD37C277032C90007B60F /* Info.plist */,
+				1FCFB1B6280B9B2100335E51 /* PhotoCell.swift */,
 			);
 			path = RxSwiftDemo;
 			sourceTree = "<group>";
@@ -409,6 +415,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F8CD373277032C80007B60F /* ViewController.swift in Sources */,
+				1FCFB1B7280B9B2100335E51 /* PhotoCell.swift in Sources */,
+				1FC1038B280A07D000C1389C /* PhotosCollectionVC.swift in Sources */,
 				1F8CD36F277032C80007B60F /* AppDelegate.swift in Sources */,
 				1F8CD371277032C80007B60F /* SceneDelegate.swift in Sources */,
 			);
