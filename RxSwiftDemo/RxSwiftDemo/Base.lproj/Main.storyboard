@@ -28,6 +28,9 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Apply Filter"/>
+                                <connections>
+                                    <action selector="applyFilterButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Lj-9D-Kyt"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bLL-yA-nse">
                                 <rect key="frame" x="0.0" y="88" width="414" height="723"/>
@@ -52,6 +55,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="filterButton" destination="Uny-I9-iIc" id="uf0-Lz-iNN"/>
                         <outlet property="photoImage" destination="bLL-yA-nse" id="rQG-yg-V7f"/>
                     </connections>
                 </viewController>

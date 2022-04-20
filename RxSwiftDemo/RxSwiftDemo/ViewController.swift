@@ -12,6 +12,7 @@ import RxCocoa
 class ViewController: UIViewController {
     
     @IBOutlet weak var photoImage: UIImageView!
+    @IBOutlet weak var filterButton: UIButton!
     
     private let disposeBag = DisposeBag()
 
@@ -20,7 +21,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        
+        self.filterButton.isHidden = true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -34,13 +35,38 @@ class ViewController: UIViewController {
         _ = photosController.selectedPhoto.subscribe(onNext: { [weak self] photo in
             
             DispatchQueue.main.async {
-                self?.photoImage.image = photo
+                self?.updateUI(with: photo)
             }
             
         }).disposed(by: disposeBag)
         
     }
-
+    
+    private func updateUI(with image: UIImage) {
+        self.photoImage.image = image
+        self.filterButton.isHidden = false
+    }
+    
+    
+    @IBAction func applyFilterButtonPressed(_ sender: Any) {
+        guard let sourceImage = self.photoImage.image else { return }
+        
+        FilterService().applyFilter(to: sourceImage)
+            .subscribe(onNext: { [weak self] filteredImage in
+                guard self != nil else { return }
+                DispatchQueue.main.async {
+                    self?.photoImage.image = filteredImage
+                }
+            }).disposed(by: disposeBag)
+        
+//        FilterService().applyFilter(to: sourceImage) { [weak self] filteredImage in
+//            guard self != nil else { return }
+//            DispatchQueue.main.async {
+//                self?.photoImage.image = filteredImage
+//            }
+//        }
+    }
+    
 
 }
 
