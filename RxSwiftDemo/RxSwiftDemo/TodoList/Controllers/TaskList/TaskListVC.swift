@@ -15,10 +15,9 @@ class TaskListVC:UIViewController {
     @IBOutlet weak var segmented: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     
-    private var tasks = BehaviorRelay<[Task]>(value: [])
-    private var tasksArray = [Task]()
-    
     private let disposeBag = DisposeBag()
+    
+    private let viewModel:TaskListResponser = TaskListVM()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,39 +31,23 @@ class TaskListVC:UIViewController {
                   fatalError("Controller not found")
               }
         
+        viewModel.updateTableView
+            .subscribe(onNext: { [weak self] _ in
+                self?.updateTableView()
+            })
+            .disposed(by: disposeBag)
+        
         addTaskVC.taskSubjectObservable
             .subscribe(onNext: { [weak self] task in
-                
                 let priority = Priority(rawValue: (self?.segmented.selectedSegmentIndex ?? 0))
-                
-               
-                var existingTasks = self?.tasks.value ?? []
-                existingTasks.append(task)
-                
-                self?.tasks.accept(existingTasks)
-                
-                self?.filterTasks(by: priority)
+                self?.viewModel.addTask(task: task, withPriority: priority)
             })
             .disposed(by: disposeBag)
     }
     
-    private func filterTasks(by priority:Priority?) {
-        if priority == nil {
-            self.tasksArray = self.tasks.value
-            self.updateTableView()
-        } else {
-            self.tasks.map { tasks in
-                return tasks.filter { $0.priority == priority! }
-            }.subscribe(onNext: { [weak self] tasks in
-                self?.tasksArray = tasks
-                self?.updateTableView()
-            }).disposed(by: disposeBag)
-        }
-    }
-    
     @IBAction func priorityValueChanged(segmentedControl: UISegmentedControl) {
         let priority = Priority(rawValue: segmentedControl.selectedSegmentIndex)
-        filterTasks(by: priority)
+        self.viewModel.filterTasks(by: priority)
     }
     
     private func updateTableView() {
@@ -82,7 +65,7 @@ extension TaskListVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.tasksArray.count
+        return self.viewModel.getTotalTasks()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -90,8 +73,7 @@ extension TaskListVC: UITableViewDataSource, UITableViewDelegate {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell") as? TaskCell
         else { return UITableViewCell() }
         
-        cell.backgroundColor = .red
-        cell.taskName.text = self.tasksArray[indexPath.row].title
+        cell.taskName.text = self.viewModel.getTaskAtPosition(position: indexPath.row).title
         
         return cell
     }
@@ -110,13 +92,5 @@ class TaskCell:UITableViewCell {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
-    
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//    }
-//
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-//    }
     
 }
