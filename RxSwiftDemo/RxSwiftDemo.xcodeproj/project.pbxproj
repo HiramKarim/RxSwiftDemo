@@ -17,11 +17,15 @@
 		1F8CD386277032C90007B60F /* RxSwiftDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8CD385277032C90007B60F /* RxSwiftDemoTests.swift */; };
 		1F8CD390277032C90007B60F /* RxSwiftDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8CD38F277032C90007B60F /* RxSwiftDemoUITests.swift */; };
 		1F8CD392277032C90007B60F /* RxSwiftDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8CD391277032C90007B60F /* RxSwiftDemoUITestsLaunchTests.swift */; };
+		1FAE834B286C1D2B00967E37 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAE834A286C1D2B00967E37 /* ArticleTableViewCell.swift */; };
 		1FC1038B280A07D000C1389C /* PhotosCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC1038A280A07D000C1389C /* PhotosCollectionVC.swift */; };
 		1FC2137C280FC14B0063343E /* FilterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC2137B280FC14B0063343E /* FilterService.swift */; };
+		1FC31A3D28529AAD0018097F /* NewsListTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC31A3C28529AAD0018097F /* NewsListTableVC.swift */; };
 		1FC7234F28471B5100BE406F /* TaskListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC7234E28471B5000BE406F /* TaskListVC.swift */; };
 		1FC7235128472B2300BE406F /* AddTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC7235028472B2200BE406F /* AddTaskVC.swift */; };
 		1FC723542847312300BE406F /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC723532847312300BE406F /* Task.swift */; };
+		1FC9B954286BB2190089BED5 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC9B953286BB2190089BED5 /* Article.swift */; };
+		1FCB2AA1286D6D5D006FD159 /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCB2AA0286D6D5D006FD159 /* URLRequest+Extensions.swift */; };
 		1FCD5DCA284D9BE1000F175F /* AddTaskVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCD5DC9284D9BE1000F175F /* AddTaskVM.swift */; };
 		1FCD5DCC284D9BED000F175F /* TaskListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCD5DCB284D9BED000F175F /* TaskListVM.swift */; };
 		1FCFB1B7280B9B2100335E51 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCFB1B6280B9B2100335E51 /* PhotoCell.swift */; };
@@ -62,11 +66,15 @@
 		1F8CD38F277032C90007B60F /* RxSwiftDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftDemoUITests.swift; sourceTree = "<group>"; };
 		1F8CD391277032C90007B60F /* RxSwiftDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1F8CD39E27703B0F0007B60F /* RxSwiftPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RxSwiftPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		1FAE834A286C1D2B00967E37 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		1FC1038A280A07D000C1389C /* PhotosCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionVC.swift; sourceTree = "<group>"; };
 		1FC2137B280FC14B0063343E /* FilterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterService.swift; sourceTree = "<group>"; };
+		1FC31A3C28529AAD0018097F /* NewsListTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListTableVC.swift; sourceTree = "<group>"; };
 		1FC7234E28471B5000BE406F /* TaskListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListVC.swift; sourceTree = "<group>"; };
 		1FC7235028472B2200BE406F /* AddTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskVC.swift; sourceTree = "<group>"; };
 		1FC723532847312300BE406F /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		1FC9B953286BB2190089BED5 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		1FCB2AA0286D6D5D006FD159 /* URLRequest+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extensions.swift"; sourceTree = "<group>"; };
 		1FCD5DC9284D9BE1000F175F /* AddTaskVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskVM.swift; sourceTree = "<group>"; };
 		1FCD5DCB284D9BED000F175F /* TaskListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListVM.swift; sourceTree = "<group>"; };
 		1FCFB1B6280B9B2100335E51 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
@@ -133,6 +141,7 @@
 		1F8CD36D277032C80007B60F /* RxSwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
+				1FC31A3B285285840018097F /* GoodNews */,
 				1FC7234D284717DE00BE406F /* TodoList */,
 				1F8CD39E27703B0F0007B60F /* RxSwiftPlayground.playground */,
 				1F8CD36E277032C80007B60F /* AppDelegate.swift */,
@@ -166,6 +175,33 @@
 			path = RxSwiftDemoUITests;
 			sourceTree = "<group>";
 		};
+		1FAE8348286C180C00967E37 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1FC9B953286BB2190089BED5 /* Article.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1FAE8349286C1D1700967E37 /* CellsView */ = {
+			isa = PBXGroup;
+			children = (
+				1FAE834A286C1D2B00967E37 /* ArticleTableViewCell.swift */,
+			);
+			path = CellsView;
+			sourceTree = "<group>";
+		};
+		1FC31A3B285285840018097F /* GoodNews */ = {
+			isa = PBXGroup;
+			children = (
+				1FCB2A9F286D6D42006FD159 /* Extensions */,
+				1FAE8349286C1D1700967E37 /* CellsView */,
+				1FAE8348286C180C00967E37 /* Model */,
+				1FC31A3C28529AAD0018097F /* NewsListTableVC.swift */,
+			);
+			path = GoodNews;
+			sourceTree = "<group>";
+		};
 		1FC7234D284717DE00BE406F /* TodoList */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +217,14 @@
 				1FC723532847312300BE406F /* Task.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		1FCB2A9F286D6D42006FD159 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1FCB2AA0286D6D5D006FD159 /* URLRequest+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		1FCD5DC4284D9993000F175F /* Controllers */ = {
@@ -488,8 +532,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FC9B954286BB2190089BED5 /* Article.swift in Sources */,
 				1F8CD373277032C80007B60F /* ViewController.swift in Sources */,
 				1FCD5DCA284D9BE1000F175F /* AddTaskVM.swift in Sources */,
+				1FCB2AA1286D6D5D006FD159 /* URLRequest+Extensions.swift in Sources */,
 				1FCFB1B7280B9B2100335E51 /* PhotoCell.swift in Sources */,
 				1FC1038B280A07D000C1389C /* PhotosCollectionVC.swift in Sources */,
 				1FC7234F28471B5100BE406F /* TaskListVC.swift in Sources */,
@@ -498,6 +544,8 @@
 				1FCD5DCC284D9BED000F175F /* TaskListVM.swift in Sources */,
 				1F8CD371277032C80007B60F /* SceneDelegate.swift in Sources */,
 				1FC723542847312300BE406F /* Task.swift in Sources */,
+				1FC31A3D28529AAD0018097F /* NewsListTableVC.swift in Sources */,
+				1FAE834B286C1D2B00967E37 /* ArticleTableViewCell.swift in Sources */,
 				1FC7235128472B2300BE406F /* AddTaskVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -681,6 +729,7 @@
 				DEVELOPMENT_TEAM = SNTB2L8C6Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RxSwiftDemo/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "CameraFilter app requirespermission to access your photo library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -710,6 +759,7 @@
 				DEVELOPMENT_TEAM = SNTB2L8C6Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RxSwiftDemo/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "CameraFilter app requirespermission to access your photo library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
